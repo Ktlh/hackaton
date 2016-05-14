@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class QuestionController {
@@ -21,13 +23,19 @@ public class QuestionController {
     QuestionService service;
     UserService service2;
 
-    @RequestMapping(value = "/result", method = RequestMethod.GET)
-    @ResponseBody
+    @RequestMapping(value = "/result", method = RequestMethod.POST)
     String saveUser(
             ModelMap modelMap,
+            String id,
             HttpServletRequest request) throws UnknownHostException {
-        String type=null;
-        InetAddress ipAdr= InetAddress.getLocalHost();
+        String mass[] = id.split("-");
+        List<Integer> results = new ArrayList<Integer>();
+        for (String num: mass) {
+            results.add(Integer.parseInt(num));
+        }
+
+//        String type=null;
+//        InetAddress ipAdr= InetAddress.getLocalHost();
 //        Users user = service.createUser(firstName, lastName, email);
 //        modelMap.addAttribute("user", user);
 //        JSONObject jsonObject = new JSONObject();
@@ -37,8 +45,9 @@ public class QuestionController {
 //            jsonObject.put("status", true);
 //        }
 
-        service2.createUser(ipAdr.getAddress().toString(),type);
-        return null;
+//        service2.createUser(ipAdr.getAddress().toString(),type);
+        modelMap.addAttribute("mass",id);
+        return "index";
     }
     @RequestMapping("/test")
     String test(ModelMap modelMap) {

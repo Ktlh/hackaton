@@ -90,6 +90,7 @@
   <!--end footer-->
 </div>
 <!--end wrap-->
+${mass}
 </body>
 <div class="cache-images"><img src="../../resources/images/red-button-bg.png" width="0" height="0" alt="" /><img src="../../resources/images/black-button-bg.png" width="0" height="0" alt="" /></div>
 <!--end cache-images-->

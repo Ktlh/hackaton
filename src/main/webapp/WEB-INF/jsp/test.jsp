@@ -62,23 +62,27 @@
                 <c:forEach items="${questions}" var="q">
                     <li class="">
                         <p>${q.question}</p>
-                        <label for="q${count}">
-                            <input id="q${count}" name="q${q.id_question}" type="radio" value="${count= count+1}">
+                        <label for="${count}">
+                            <input id="q${count}" name="${q.id_question}" type="radio" checked value="${count= count+1}">
                             ${q.answer_1}
                         </label><br>
-                        <label for="q${count}">
-                            <input id="q${count}" name="q${q.id_question}" type="radio" value="${count= count+1}">
+                        <label for="${count}">
+                            <input id="q${count}" name="${q.id_question}" type="radio" value="${count= count+1}">
                                 ${q.answer_2}
                         </label><br>
-                        <label for="q${count}">
-                            <input id="q${count}" name="q${q.id_question}" type="radio" value="${count= count+1}">
+                        <label for="${count}">
+                            <input id="q${count}" name="${q.id_question}" type="radio" value="${count= count+1}">
                                 ${q.answer_3}
                         </label><br>
-                        <label for="q${count}">
-                            <input id="q${count}" name="q${q.id_question}" type="radio" value="${count= count+1}">
+                        <label for="${count}">
+                            <input id="q${count}" name="${q.id_question}" type="radio" value="${count= count+1}">
                                 ${q.answer_4}
                         </label><br>
+                        <c:if test="${q.id_question==20}">
+                            <input id="send" type="button" value="test"/>
+                        </c:if>
                     </li>
+
                 </c:forEach>
                 <%--<li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif"--%>
                 <%--alt=""/></a></li>--%>
