@@ -6,7 +6,7 @@
 </head>
 <body>
 <table>
-  <c:forEach var="u" items="${users}">
+  <c:forEach var="u" items="${userses}">
     <tr>
       <td>${u.firstName}</td>
       <td>${u.lastName}</td>

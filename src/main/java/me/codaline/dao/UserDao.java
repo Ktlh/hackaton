@@ -1,6 +1,6 @@
 package me.codaline.dao;
 
-import me.codaline.model.User;
+import me.codaline.model.Users;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -17,19 +17,19 @@ public class UserDao {
     @Autowired
     SessionFactory sessionFactory;
 
-    public void save(User user) {
-        sessionFactory.getCurrentSession().save(user);
+    public void save(Users users) {
+        sessionFactory.getCurrentSession().save(users);
     }
 
-    public List<User> getUsers() {
-        return sessionFactory.getCurrentSession().createCriteria(User.class).list();
+    public List<Users> getUsers() {
+        return sessionFactory.getCurrentSession().createCriteria(Users.class).list();
     }
 
-    public User getUser(String email) {
-        Criteria criteria = sessionFactory.getCurrentSession().createCriteria(User.class);
-        criteria.add(Restrictions.eq("email", email));
-//        Query query = sessionFactory.getCurrentSession().createQuery("select from User as u where u.email =:email");
+    public Users getUser(String ip_user) {
+        Criteria criteria = sessionFactory.getCurrentSession().createCriteria(Users.class);
+        criteria.add(Restrictions.eq("ip_user", ip_user));
+//        Query query = sessionFactory.getCurrentSession().createQuery("select from Users as u where u.email =:email");
 //        query.setParameter("email", email);
-        return (User) criteria.uniqueResult();
+        return (Users) criteria.uniqueResult();
     }
 }

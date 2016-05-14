@@ -5,10 +5,10 @@
 </head>
 <body>
 <h1>
-  ${user.firstName}<br>
-  ${user.lastName}<br>
-  ${user.email}<br>
-  ${user.pass}
+  ${users.firstName}<br>
+  ${users.lastName}<br>
+  ${users.email}<br>
+  ${users.pass}
 </h1>
 </body>
 </html>

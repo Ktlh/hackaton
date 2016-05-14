@@ -50,7 +50,7 @@
     <div id="image-slider">
       <ul id="mycarousel" class="jcarousel-skin-tango">
         <li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>
-        <li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>
+        <li>hui</li>
         <li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>
         <li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>
         <li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>

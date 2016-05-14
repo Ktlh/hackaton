@@ -4,10 +4,10 @@
     <title></title>
 </head>
 <body>
-${user.firstName}
-${user.lastName}
-${user.email}
-${user.pass}
+${users.firstName}
+${users.lastName}
+${users.email}
+${users.pass}
 User was saved
 </body>
 </html>
