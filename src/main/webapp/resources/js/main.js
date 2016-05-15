@@ -10,6 +10,29 @@ function Send() {
     }
     $.post("/result", {
             id: mass
+        },
+        function (response) {
+            google.charts.load("current", {packages:["corechart"]});
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var array = [];
+                array.push(['Profession', 'Points']);
+                for(var i = 0; i < response.length; i++){
+                    array.push([response[i].key, response[i].value])
+                }
+                console.log(array);
+                var data = google.visualization.arrayToDataTable(array);
+
+                console.log(data);
+                var options = {
+                    title: 'Professional Orientation',
+                    pieHole: 0.4
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('result-chart'));
+                $("#image-slider").hide();
+                chart.draw(data, options);
+            }
         }
     )
 }

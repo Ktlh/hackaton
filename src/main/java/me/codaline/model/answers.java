@@ -10,60 +10,21 @@ public class answers {
     @GeneratedValue
     int Id;
     int id_question;
-    boolean develop;
-    boolean design;
-    boolean economy;
-    boolean marketing;
-    boolean bo;
+    int develop;
+    int desing;
+    int economy;
+    int marketing;
+    int bo;
 
-    boolean comp;
+    int comp;
 
-    public boolean isComp() {
-        return comp;
+
+    public int getId() {
+        return Id;
     }
 
-    public void setComp(boolean comp) {
-        this.comp = comp;
-    }
-
-    public boolean isBo() {
-        return bo;
-    }
-
-    public void setBo(boolean bo) {
-        this.bo = bo;
-    }
-
-    public boolean isMarketing() {
-        return marketing;
-    }
-
-    public void setMarketing(boolean marketing) {
-        this.marketing = marketing;
-    }
-
-    public boolean isEconomy() {
-        return economy;
-    }
-
-    public void setEconomy(boolean economy) {
-        this.economy = economy;
-    }
-
-    public boolean isDesign() {
-        return design;
-    }
-
-    public void setDesign(boolean design) {
-        this.design = design;
-    }
-
-    public boolean isDevelop() {
-        return develop;
-    }
-
-    public void setDevelop(boolean develop) {
-        this.develop = develop;
+    public void setId(int id) {
+        Id = id;
     }
 
     public int getId_question() {
@@ -74,11 +35,51 @@ public class answers {
         this.id_question = id_question;
     }
 
-    public int getId() {
-        return Id;
+    public int getDevelop() {
+        return develop;
     }
 
-    public void setId(int id) {
-        Id = id;
+    public void setDevelop(int develop) {
+        this.develop = develop;
+    }
+
+    public int getDesign() {
+        return desing;
+    }
+
+    public void setDesign(int desing) {
+        this.desing = desing;
+    }
+
+    public int getEconomy() {
+        return economy;
+    }
+
+    public void setEconomy(int economy) {
+        this.economy = economy;
+    }
+
+    public int getMarketing() {
+        return marketing;
+    }
+
+    public void setMarketing(int marketing) {
+        this.marketing = marketing;
+    }
+
+    public int getBo() {
+        return bo;
+    }
+
+    public void setBo(int bo) {
+        this.bo = bo;
+    }
+
+    public int getComp() {
+        return comp;
+    }
+
+    public void setComp(int comp) {
+        this.comp = comp;
     }
 }

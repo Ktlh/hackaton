@@ -47,19 +47,7 @@
     <h2>We design original and effective online experiences</h2>
     <div id="circles"> <img class="first" src="../../resources/images/circle-red.png" /> <img src="../../resources/images/circle-pink.png" /> <img src="../../resources/images/circle-orange.png" /> <img src="../../resources/images/circle-yellow.png" /> </div>
     <!--end circles-->
-    <div id="image-slider">
-      <ul id="mycarousel" class="jcarousel-skin-tango">
-        <li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>
-        <li></li>
-        <li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>
-        <li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>
-        <li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>
-        <li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>
-        <li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>
-        <li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>
-        <li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt="" /></a></li>
-      </ul>
-    </div>
+    ${mass}
     <!--end image-slider-->
   </div>
   <!--end featured-section-->
@@ -91,7 +79,7 @@
 </div>
 <!--end wrap-->
 
-</body>
 <div class="cache-images"><img src="../../resources/images/red-button-bg.png" width="0" height="0" alt="" /><img src="../../resources/images/black-button-bg.png" width="0" height="0" alt="" /></div>
+</body>
 <!--end cache-images-->
 </html>

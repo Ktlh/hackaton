@@ -13,6 +13,7 @@
     <script type="text/javascript" src="../../resources/js/jquery.jcarousel.min.js"></script>
     <script type="text/javascript" src="../../resources/js/initSlider.js"></script>
     <script type="text/javascript" src="../../resources/js/main.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <!--[if IE 6]>
 
@@ -57,78 +58,90 @@
         <!--end circles-->
 
         <div id="image-slider">
-            <ul id="mycarousel" class="jcarousel-skin-tango">
-                <c:set var="count" value="0"/>
-                <c:forEach items="${questions}" var="q">
+            <div style="align-content: center ">
+                <ul id="mycarousel" class="jcarousel-skin-tango">
+                    <c:set var="count" value="0"/>
+                    <c:forEach items="${questions}" var="q">
                     <li class="">
                         <p>${q.question}</p>
-                        <label for="${count}">
-                            <input id="q${count}" name="${q.id_question}" type="radio" checked value="${count= count+1}">
-                            ${q.answer_1}
-                        </label><br>
-                        <label for="${count}">
-                            <input id="q${count}" name="${q.id_question}" type="radio" value="${count= count+1}">
-                                ${q.answer_2}
-                        </label><br>
-                        <label for="${count}">
-                            <input id="q${count}" name="${q.id_question}" type="radio" value="${count= count+1}">
-                                ${q.answer_3}
-                        </label><br>
-                        <label for="${count}">
-                            <input id="q${count}" name="${q.id_question}" type="radio" value="${count= count+1}">
+
+                        <div>
+                            <label for="q${count-1}">
+                                <input id="q${count}" name="${q.id_question}" type="radio" class="radio" checked
+                                    value="${count= count+1}">
+                                ${q.answer_1}
+                        </label></div>
+
+                        <div><label for="q${count-1}">
+                            <input id="q${count}" name="${q.id_question}" type="radio" class="radio"
+                                    value="${count= count+1}"> ${q.answer_2}
+                        </label></div>
+
+                        <div><input id="q${count}" name="${q.id_question}" type="radio" class="radio"
+                                    value="${count= count+1}"><label for="q${count-1}"> ${q.answer_3}
+
+                        </label></div>
+
+
+                        <div><input id="q${count}" name="${q.id_question}" type="radio" class="radio"
+                                    value="${count= count+1}"><label for=q"${count-1}">
                                 ${q.answer_4}
-                        </label><br>
+                        </label></div>
                         <c:if test="${q.id_question==20}">
-                            <input id="send" type="button" value="test"/>
+                            <div class="read-more" id="send">Get Result</div>
                         </c:if>
                     </li>
 
-                </c:forEach>
-                <%--<li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif"--%>
-                <%--alt=""/></a></li>--%>
-                <%--<li><input type="radio" value=""></li>--%>
-                <%--<li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt=""/></a></li>--%>
-                <%--<li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif"--%>
-                <%--alt=""/></a></li>--%>
-                <%--<li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt=""/></a></li>--%>
-                <%--<li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt=""/></a></li>--%>
-                <%--<li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif"--%>
-                <%--alt=""/></a></li>--%>
-                <%--<li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt=""/></a></li>--%>
-                <%--<li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt=""/></a></li>--%>
+                    </c:forEach>
+            </div>
+
+            <%--<li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif"--%>
+            <%--alt=""/></a></li>--%>
+            <%--<li><input type="radio" value=""></li>--%>
+            <%--<li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt=""/></a></li>--%>
+            <%--<li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif"--%>
+            <%--alt=""/></a></li>--%>
+            <%--<li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt=""/></a></li>--%>
+            <%--<li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt=""/></a></li>--%>
+            <%--<li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif"--%>
+            <%--alt=""/></a></li>--%>
+            <%--<li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt=""/></a></li>--%>
+            <%--<li><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif" alt=""/></a></li>--%>
             </ul>
         </div>
         <!--end image-slider-->
+
     </div>
     <!--end featured-section-->
-    <div id="frontpage-main">
-        <div id="frontpage-content">
-            <h3>Why Work With Akono?</h3>
-            <p>You’ll not regret getting in touch with us about your new project. Below are some of the benefits.</p>
-            <ul class="blue-bullets">
-                <li>Over 15 Years Real World Experience</li>
-                <li>Voted No. 1 Design Studio In The World</li>
-                <li>Support And Guidance At Every Step</li>
-                <li>A Great Solution That You&#8217;ll Be Happy With</li>
-            </ul>
-        </div>
-        <!--end frontpage-content-->
-        <div id="frontpage-sidebar">
-            <h3>Latest Article</h3>
-            <a class="blog-title" href="#">Top Tips For Hiring A Design Agency</a>
-            <p class="meta">1st May 2011 / <a href="#">No Comments &#187;</a></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip.</p>
-            <a class="read-more" href="#">Read More &raquo;</a></div>
-        <!--end frontpage-sidebar-->
-    </div>
-    <!--end frontpage-main-->
-    <div id="footer">
-        <p class="copyright">Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved / Design By <a
-                target="_blank" href="http://www.chris-creed.com/">Chris Creed</a></p>
-    </div>
+    <%--<div id="frontpage-main">--%>
+    <%--<div id="frontpage-content">--%>
+    <%--<h3>Why Work With Akono?</h3>--%>
+    <%--<p>You’ll not regret getting in touch with us about your new project. Below are some of the benefits.</p>--%>
+    <%--<ul class="blue-bullets">--%>
+    <%--<li>Over 15 Years Real World Experience</li>--%>
+    <%--<li>Voted No. 1 Design Studio In The World</li>--%>
+    <%--<li>Support And Guidance At Every Step</li>--%>
+    <%--<li>A Great Solution That You&#8217;ll Be Happy With</li>--%>
+    <%--</ul>--%>
+    <%--</div>--%>
+    <%--<!--end frontpage-content-->--%>
+    <%--<div id="frontpage-sidebar">--%>
+    <%--<h3>Latest Article</h3>--%>
+    <%--<a class="blog-title" href="#">Top Tips For Hiring A Design Agency</a>--%>
+    <%--<p class="meta">1st May 2011 / <a href="#">No Comments &#187;</a></p>--%>
+    <%--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et--%>
+    <%--dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut--%>
+    <%--aliquip.</p>--%>
+    <%--<a class="read-more" href="#">Read More &raquo;</a></div>--%>
+    <%--<!--end frontpage-sidebar-->--%>
+    <%--</div>--%>
+    <%--<!--end frontpage-main-->--%>
+    <%--<div id="footer">--%>
+    <%--<p class="copyright">Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved / Design By <a--%>
+    <%--target="_blank" href="http://www.chris-creed.com/">Chris Creed</a></p>--%>
+    <%--</div>--%>
     <!--end footer-->
+    <div id="result-chart" style="width: 100%; height: 350px"></div>
 </div>
 <!--end wrap-->
 </body>
