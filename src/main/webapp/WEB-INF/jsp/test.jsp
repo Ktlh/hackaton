@@ -32,7 +32,7 @@
 <body class="home">
 <div id="wrap">
     <div id="header"><img src="../../resources/images/logo.png"/>
-
+        <a href="#scroll">test</a>
         <div id="nav">
             <ul class="menu">
                 <li class="current_page_item"><a href="index.jsp">Home</a></li>
@@ -57,42 +57,99 @@
         <%--<div id="circles"> <img class="first" src="../../resources/images/circle-red.png" /> <img src="../../resources/images/circle-pink.png" /> <img src="../../resources/images/circle-orange.png" /> <img src="../../resources/images/circle-yellow.png" /> </div>--%>
         <!--end circles-->
 
-        <div id="image-slider">
+        <div id="image-slider" style="width: 1000px; height: 482px">
             <div style="align-content: center ">
                 <ul id="mycarousel" class="jcarousel-skin-tango">
                     <c:set var="count" value="0"/>
+
                     <c:forEach items="${questions}" var="q">
                     <li class="">
-                        <p>${q.question}</p>
 
-                        <div>
+                        <p STYLE="text-align: center; font-size: 22pt; font-family: 'OCR A Extended';">${q.question}</p>
+                        <div style="font-size: 15pt; font-family: 'OCR A Extended';">
+                            </br>
                             <label for="q${count-1}">
                                 <input id="q${count}" name="${q.id_question}" type="radio" class="radio" checked
-                                    value="${count= count+1}">
-                                ${q.answer_1}
-                        </label></div>
+                                       value="${count= count+1}" style="display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
 
-                        <div><label for="q${count-1}">
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+    color: #2684cd;
+    ">
+                                    ${q.answer_1}
+                            </label></div>
+                        </br>
+
+
+                        <div style="font-size: 15pt; font-family: 'OCR A Extended';"><label for="q${count-1}">
                             <input id="q${count}" name="${q.id_question}" type="radio" class="radio"
-                                    value="${count= count+1}"> ${q.answer_2}
+                                   value="${count= count+1}" style="display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+    color: #2684cd;
+    "> ${q.answer_2}
                         </label></div>
+                        </br>
 
-                        <div><input id="q${count}" name="${q.id_question}" type="radio" class="radio"
-                                    value="${count= count+1}"><label for="q${count-1}"> ${q.answer_3}
+                        <div style="font-size: 15pt; font-family: 'OCR A Extended';"><input id="q${count}"
+                                                                                            name="${q.id_question}"
+                                                                                            type="radio" class="radio"
+                                                                                            value="${count= count+1}"
+                                                                                            style="display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+    color: #2684cd;
+    "><label
+                                for="q${count-1}"> ${q.answer_3}
 
                         </label></div>
+                        </br>
 
 
-                        <div><input id="q${count}" name="${q.id_question}" type="radio" class="radio"
-                                    value="${count= count+1}"><label for=q"${count-1}">
+                        <div style="font-size: 15pt; font-family: 'OCR A Extended';"><input id="q${count}"
+                                                                                            name="${q.id_question}"
+                                                                                            type="radio" class="radio"
+                                                                                            value="${count= count+1}"
+                                                                                            style="display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+    color: #2684cd;
+    "><label
+                                for=q"${count-1}">
                                 ${q.answer_4}
                         </label></div>
                         <c:if test="${q.id_question==20}">
-                            <div class="read-more" id="send">Get Result</div>
+                            <a href="#scrol" class="knopka" id="send" onclick="Send();" style=" position: absolute; font-size: 12pt; left: 720px ">Get
+                                Result</a>
                         </c:if>
+
+
+                        </c:forEach>
                     </li>
 
-                    </c:forEach>
             </div>
 
             <%--<li class="first"><a href="#"><img width="280" height="190" src="../../resources/images/280x190.gif"--%>
@@ -141,7 +198,17 @@
     <%--target="_blank" href="http://www.chris-creed.com/">Chris Creed</a></p>--%>
     <%--</div>--%>
     <!--end footer-->
-    <div id="result-chart" style="width: 100%; height: 350px"></div>
+
+</div>
+<div id="scrol" style="width: 100%; height: 950px; top: 930px; position: absolute;">
+    <div id="result-chart" style="width: 60%; height: 60%; position: absolute;left: 5%; top: 21%; margin: auto"></div>
+    <div style="width: 60%; height: 60%; position: absolute;left: 50%; top: 32%; margin: auto">
+        <span style="font-size: 70pt; font-family: 'Verdana'; color:dimgrey">Congrats!</span>
+        </br>
+        </br>
+        </br>
+        <span style="font-size: 20pt; font-family: 'Verdana'; color: black">You confimed the test! This is approximate result chart.</span>
+    </div>
 </div>
 <!--end wrap-->
 </body>
