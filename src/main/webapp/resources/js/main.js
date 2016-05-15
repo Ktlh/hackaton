@@ -7,6 +7,9 @@
 // });
 // });
 function Send() {
+    var id  = $("#scrol");
+    // id.slideToggle();
+    // $("#wrap").slideToggle();
     event.preventDefault();
     var mass = "";
     for (var i = 1; i < 21; i++) {
@@ -40,10 +43,10 @@ function Send() {
                 
                 // location.href = 'http://localhost:8080/test#scroll';
 
+                var top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 1500);
             }
         }
     )
-    var id  = $("#scrol");
-   var top = $(id).offset().top;
-    $('body,html').animate({scrollTop: top}, 1500);
+
 }

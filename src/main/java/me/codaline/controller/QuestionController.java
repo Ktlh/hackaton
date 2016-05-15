@@ -94,10 +94,10 @@ public class QuestionController {
         return responseResults;
     }
 
-    @RequestMapping("/test")
+    @RequestMapping("/")
     String test(ModelMap modelMap) {
         List<questions> questionses = service.getQuestions();
         modelMap.addAttribute("questions", questionses);
-        return "test";
+        return "main";
     }
 }

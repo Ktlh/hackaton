@@ -6,6 +6,7 @@
 <head>
     <title>Akono</title>
     <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="http://codaline.me/css/bootstrap.min.css"/>
     <link type="text/css" rel="stylesheet" href="../../resources/styles/style.css"/>
     <link type="text/css" rel="stylesheet" href="../../resources/styles/skin.css"/>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
@@ -30,30 +31,13 @@
     <link rel="stylesheet" href="styles/ie8.css"/><![endif]-->
 </head>
 <body class="home">
-<div id="wrap">
-    <div id="header"><img src="../../resources/images/logo.png"/>
-        <a href="#scroll">test</a>
-        <div id="nav">
-            <ul class="menu">
-                <li class="current_page_item"><a href="index.jsp">Home</a></li>
-                <li><a href="page.html">Services</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">Branding</a></li>
-                        <li><a href="#">Online Marketing</a></li>
-                        <li><a href="#">Search Engine Optimization</a></li>
-                        <li><a href="#">Web Design</a></li>
-                    </ul>
-                </li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <!--end nav-->
-    </div>
+<div id="wrap" class="container">
+    <div id="header"><img src="../../resources/images/it.jpg" width="100"
+    height="100"/>
+
     <!--end header-->
     <div id="featured-section">
-        <h2>We design original and effective online experiences</h2>
+        <p style=" padding-top: 10px; text-align:center;font-size: 25pt; font-family: 'OCR A Extended'; color:dimgrey; z-index: 1;">Welcome! Offer you to complete profile test for</br> get approximate direction in IT sector.   </p>
         <%--<div id="circles"> <img class="first" src="../../resources/images/circle-red.png" /> <img src="../../resources/images/circle-pink.png" /> <img src="../../resources/images/circle-orange.png" /> <img src="../../resources/images/circle-yellow.png" /> </div>--%>
         <!--end circles-->
 
@@ -140,11 +124,12 @@
     "><label
                                 for=q"${count-1}">
                                 ${q.answer_4}
-                        </label></div>
-                        <c:if test="${q.id_question==20}">
-                            <a href="#scrol" class="knopka" id="send" onclick="Send();" style=" position: absolute; font-size: 12pt; left: 720px ">Get
-                                Result</a>
-                        </c:if>
+                        </label>
+                            <c:if test="${q.id_question==20}">
+                                <a href="#scrol" class="knopka" id="send" onclick="Send();" style="  font-size: 12pt;">Get
+                                    Result</a>
+                            </c:if></div>
+
 
 
                         </c:forEach>
@@ -200,14 +185,26 @@
     <!--end footer-->
 
 </div>
-<div id="scrol" style="width: 100%; height: 950px; top: 930px; position: absolute;">
-    <div id="result-chart" style="width: 60%; height: 60%; position: absolute;left: 5%; top: 21%; margin: auto"></div>
-    <div style="width: 60%; height: 60%; position: absolute;left: 50%; top: 32%; margin: auto">
-        <span style="font-size: 70pt; font-family: 'Verdana'; color:dimgrey">Congrats!</span>
-        </br>
-        </br>
-        </br>
-        <span style="font-size: 20pt; font-family: 'Verdana'; color: black">You confimed the test! This is approximate result chart.</span>
+<div id="scrol" style="top: 1070px; left: 20%; position: absolute" class="container">
+    <div style="display: block; text-align: center; margin: auto;">
+        <p style="font-size: 70pt; font-family: 'Verdana'; color:dimgrey; z-index: 1;">Congrats!</p>
+        <br>
+        <br>
+        <br>
+        <p style="font-size: 20pt; font-family: 'Verdana'; color: black;" >You confimed the test! This is approximate result chart.</p>
+    </div>
+    <div class="row" style="background: #fff">
+        <div id="result-chart" class="col-md-12" style="height: 350px;">
+
+        </div>
+    </div>
+    <div class="row" style="background: #fff">
+        <div id="circles" class="col-md-12">
+            <img class="col-md-3" src="../../resources/images/it.jpg" />
+            <img class="col-md-3"  src="../../resources/images/med.jpg" />
+            <img class="col-md-3"  src="../../resources/images/bus.jpg" />
+            <img class="col-md-3" src="../../resources/images/educ.jpg" />
+        </div>
     </div>
 </div>
 <!--end wrap-->
